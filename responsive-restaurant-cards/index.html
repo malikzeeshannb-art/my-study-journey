@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Freshbite-Restaurant-Layout</title>
+        <style>
+         * {
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0px;
+         }
+         body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(255, 255, 255);
+            color: rgb(40, 40, 40);
+            line-height: 1.5;
+         }  
+         header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            background-color: rgb(169, 227, 208);
+            min-height: 1.5rem;
+            margin-bottom: 2rem;
+
+         }
+         .main-header {
+            display: flex;
+            max-width: 75ch;
+            margin: auto;
+            justify-content: space-between;
+            padding: 0 5px;
+         }
+         .logo {
+            font-size: 2rem;
+            font-weight: bold;
+         }
+         .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+         }
+         .nav-links a {
+            text-decoration: none;
+            color: rgb(40, 40, 40);
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+         }
+         .main-section {
+            margin: 10px 0px;
+            line-height: 1.6;
+            max-width: 70ch;
+            margin-inline: auto;
+            padding: 10px;
+         }
+         .main-section > h1 {
+            font-size: 2.5rem;
+            color: rgb(0, 123, 255);
+            text-align: center;
+         }
+         .btn-parent {
+            display: flex;
+            justify-content: center;
+         }
+         .menu-button {
+            padding: 5px 8px;
+            margin-top: 1rem;
+            border: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            background-color: rgb(197, 243, 248);
+            border-radius: 6px;
+            box-shadow: 0 3px 5px rgb(189, 189, 189);
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+         }
+         .menu-button:hover {
+            background-color: rgb(185, 252, 129);
+            box-shadow: 0 4px 5px rgb(167, 167, 167);
+            transform: scale(1.05); rotate: 2deg;
+         }
+         .container {
+        display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           gap: 20px;
+           padding: 1.5rem;
+           max-width: 70ch;
+           margin-inline: auto;
+
+         }
+         .card {
+            background-color: rgb(246, 189, 246);
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 5px 3px silver;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+         }
+         .card:hover {
+            background-color: rgb(249, 141, 148);
+            transform: translateY(-5px);
+         }
+         .card > strong {
+            font-size: 1.2rem;
+            color: rgb(0, 123, 255);
+            font-weight: bold;
+         }
+         .about-us-detail {
+            line-height: 1.6;
+            max-width: 70ch;
+            margin-inline: auto;
+            padding: 10px;
+         }
+          .contact-detail {
+            text-align: center;
+            padding: 10px;
+            margin: auto;
+         }
+        </style>
+    </head>
+    <body>
+      <header>
+        <div class="main-header">
+            <div class="logo">FreshBite</div>
+            <nav class="nav-links">
+                    <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+            </nav>
+        </div>
+      </header>
+        <section class="main-section">
+            <h1>Real Food, Made Fresh</h1>
+            <p>Our food is made fresh daily, using only the best ingredients, sourced locally whenever possible, to ensure the highest quality and flavor
+               , because we believe that great food starts with great ingredients,
+                and we’re committed to serving you meals that are not only delicious but also made with care and integrity, so you can enjoy every bite knowing it’s crafted with passion and quality.
+            </p>
+            <section class="btn-parent">
+           <a href="#menu" class="menu-button">View Menu</a>
+            </section>
+        </section>
+        <main class="main-content">
+            <h2 style="text-align: center;">Our Favorites!</h2>
+            <div class="container" id="menu">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Classic Beef Burger</h3>
+                        <p>Juicy beef patty, fresh lettuce, tomato, onion, special sauce</p>
+                    </div>
+                    <strong>29 SAR</strong>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <h3>Chicken Shawarma Plate</h3>
+                    <p>Tender marinated chicken, garlic sauce, pickles, rice & salad</p>
+                  </div>
+                    <strong>34 SAR</strong>
+                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3>Mixed Grill Platter</h3>
+                                        <p>Chicken tikka, kofta, lamb chops, grilled veggies, sauce</p>
+                                    </div>
+                    
+                    <strong>59 SAR</strong>
+            </div>
+            </div>
+            <section class="about-us-detail">
+                <h2 style="color: rgb(3, 164, 3); text-align: center;">About FreshBite</h2>
+                <p>We’re a small, family-run spot focused on serving honest, flavorful food fast. No frozen stuff, no shortcuts — just good ingredients and people who care about what ends up on your plate.</p>
+            </section>
+            <section class="contact-detail">
+                <h2>Find Us</h2>
+                <span><strong>address:</strong>King Abdulaziz Rd, Al Aziziyah, Yanbu</span>
+                <span><strong>Phone:</strong>+966138228472</span><br>
+                <span><strong>Opning Hours:</strong>11:00 AM - 11:00 PM</span>
+                <hr>
+            </section>
+        </main>
+        <footer>
+            <h4 style="text-align: center;">FreshBite © 2026 – All rights reserved</h4>
+        </footer>
+    </body>
+</html>

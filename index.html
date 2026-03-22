@@ -4,79 +4,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta name="description" content="Zeeshan's frontend study journey showcasing HTML and CSS projects, clean UI work, BEM-based structure, and production-ready frontend practice.">
 
-  <title>Zeeshan | Frontend Study Journey</title>
+<meta name="keywords" content="Zeeshan, frontend developer, HTML CSS projects, BEM, portfolio, study journey, web development, responsive design">
+
+<meta name="author" content="Zeeshan">
+
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:title" content="Zeeshan | Frontend Portfolio">
+<meta property="og:description" content="A frontend study journey built through real project tasks, clean structure, and production-ready HTML/CSS practice.">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zeeshan | Frontend Portfolio">
+<meta name="twitter:description" content="Frontend study journey with clean HTML/CSS projects and real-world development practice.">
+<title>Zeeshan | Frontend Portfolio</title>
 
 <style>
 
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
 body {
-font-family: Arial, Helvetica, sans-serif;
-max-width:900px;
-margin:auto;
-padding:40px 20px;
-line-height:1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9fafb;
+  color: #111;
+  line-height: 1.6;
 }
 
-h1{
-margin-bottom:10px;
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-.project{
-border:1px solid #ddd;
-padding:20px;
-margin-top:20px;
-border-radius:8px;
+/* HEADER */
+.header {
+  margin-bottom: 40px;
 }
 
-a{
-text-decoration:none;
-font-weight:bold;
-color:blue;
-transition: border-bottom 250ms ease-out;
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
-  a:hover {
-    transform: scale(1.06);
-    border-bottom: 2px solid rgb(79, 154, 233);
-  }
+
+.header p {
+  color: #555;
+  max-width: 600px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* PROJECT CARD */
+.project {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* BUTTON SYSTEM */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  border:none;
+  box-shadow: 0 3px 6px rgb(220, 220, 220);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.btn--primary {
+  background: #e5e5e5;
+  color: #2535eb;
+}
+
+.btn--primary:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 5px 8px rgb(174, 174, 174);
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #777;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>Frontend Study Journey</h1>
-<p>This page lists the projects I build while learning frontend development.
-Each project is created from a task brief provided by AI acting as a
-senior developer or client.</p>
+<div class="container">
 
-<h2>Projects</h2>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Zeeshan — Frontend Developer</h1>
+    <p>I am a self-taught frontend developer focused on building clean, structured,
+      and scalable user interfaces using HTML and CSS. This page showcases my
+      learning journey through real-world project tasks, where I focus on writing
+      production-ready code and improving with every project.</p>
+    
+    <p>I study frontend development by first understanding each concept deeply, then practicing
+      it through real projects. Most of the time, I use ChatGPT and other AI tools as a 
+      client or senior developer to assign me realistic tasks, so I can build the UI myself
+      and strengthen my problem-solving skills.</p>
+  </header>
 
-<div class="project">
-<h3>Responsive Cards Layout</h3>
-<p>Three responsive cards with hover and active states.Built with HTML and CSS using Flexbox to strengthen layout skills.</p>
-<a href="Project-UI-Polish-Animations/index.html">Open Project</a>
-</div>
-  
-  <div class="project">
-    <h3>FreshBite – Responsive Restaurant Landing Page</h3>
-<p>This project is a sleek, single-page restaurant landing design showcasing responsive menu cards. Inspired by a real eatery,
-  FreshBite features a sticky navigation, vibrant food cards, and a flexible layout using Flexbox.
-  This project helped me practice responsive design principles, layout structure, and interactive UI elements.<p>
-<a href="responsive-restaurant-cards/index.html">Open Project</a>
-</div>
-  
- <div class="project">
-<h3>AI Dashboard Landing Page</h3>
-<p>Responsive landing page focused on cross-device layout stability and fixing edge-case UI issues.</p>
-<a href="cross-device-testing-fix-edge-case-layouts-project/" target="_blank">Open Project</a>
+  <!-- PROJECTS -->
+  <section>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project">
+      <h3>Responsive Cards Layout</h3>
+      <p>
+        A responsive card layout built using Flexbox, focusing on spacing,
+        alignment, and hover interactions.
+      </p>
+      <a href="Project-UI-Polish-Animations/index.html" class="btn btn--primary">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>FreshBite – Restaurant Landing Page</h3>
+      <p>
+        A single-page restaurant layout featuring responsive cards, sticky navigation,
+        and clean UI structure.
+      </p>
+      <a href="responsive-restaurant-cards/index.html" class="btn btn--primary">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>AI Dashboard Landing Page</h3>
+      <p>
+        A layout-focused project designed to handle cross-device UI issues and improve
+        responsive behavior.
+      </p>
+      <a href="cross-device-testing-fix-edge-case-layouts-project/index.html" target="_blank" class="btn btn--primary">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Theme Toggle UI + Accessibility</h3>
+      <p>
+        A multi-theme UI project focusing on light/dark modes, accessibility,
+        and consistent color systems.
+      </p>
+      <a href="accessible-multi-theme-ui-system-light-and-dark/index.html" class="btn btn--primary">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Astra Studio Landing Page</h3>
+      <p>
+        A production-focused landing page built with a strong emphasis on clean code,
+        BEM methodology, and structured CSS architecture.
+      </p>
+      <a href="astra-studio-landing-page/index.html" target="_blank" class="btn btn--primary">View Project</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Zeeshan — Frontend Study Journey</p>
+  </footer>
+
 </div>
 
-  <div class="project">
-<h3>Theme Toggle UI + Accessibility Compliance</h3>
-<p>A theme toggle UI project focused on light and dark mode design using CSS variables. 
-It highlights accessibility, color contrast, and consistent UI behavior across different themes.</p>
-<a href="accessible-multi-theme-ui-system-light-and-dark/index.html">Open Project</a>
-</div>
-  
 </body>
 </html>

@@ -1,0 +1,199 @@
+.main-section {
+    padding: 0 var(--space-sm);
+    max-width: 1200px;
+    margin-inline: auto;
+}
+                         /*code for hero sectin*/
+.hero-section {
+    margin-bottom: var(--space-lg);
+    max-width: 75ch;
+    margin-inline: auto;
+    line-height: 1.6;
+}
+.hero-section h1, .hero-section p {
+    text-align: center;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+                       /*button set-up code sectin*/
+.btn {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 3px 5px var(--base-shadow);
+    transition: all ease-out 250ms;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.card .btn {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 3px 5px var(--base-shadow);
+    transition: all ease-out 250ms;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+.btn:hover {
+    box-shadow: 0 4px 8px var(--hover-shadow);
+    transform: scale(1.05);
+}
+.btn:active {
+    transform: scale(1.0);
+}
+.btn:focus {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+}
+.btn__lg {
+    font-size: var(--text-sm);
+    font-weight: bold;
+    padding: var(--space-xs) var(--space-sm);
+}
+.btn__sm {
+    font-weight: bold;
+    padding: var(--space-xs) var(--space-xs);
+}
+.btn--primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+.btn--secondary {
+    background-color: var( --btn-secondary-bg);
+    color: var(--btn-secondary-text);
+}
+                        /*code for service sectin*/
+.services-section {
+max-width: 75ch;
+margin-inline: auto;
+line-height: 1.6;
+}
+@media screen and (min-width: 1200px) {
+    .services-section {
+        max-width: 1200px;
+        margin-inline: auto;
+        line-height: 1.6;
+    }
+}
+.services-section h2 {
+    font-size: var(--text-lg);
+    color: var(--text-main);
+    margin-bottom: var(--space-sm);
+}
+.service-container {
+    border-left: 4px solid var(--border-focus);
+    margin-bottom: var(--space-lg);
+    padding: 0 var(--space-sm);
+}
+          /* this code section for those projects that i already compleated */
+.project-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+.completed-projects-section h2 {
+    font-size: var(--text-lg);
+    text-align: center;
+    margin-bottom: var(--space-xs);
+}
+.card {
+    border:1px solid var(--border-base);
+    border-radius: var(--radius-md);
+    padding: var(--space-xs) var(--space-sm);
+    box-shadow: 0 6px 10px var(--base-shadow);
+    background-color: var(--bg-surface);
+    transition: all ease 300ms;
+    line-height: 1.5;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px var(--hover-shadow);
+}
+.card__title {
+    margin-bottom: var(--space-xs);
+    font-size: var(--text-md);
+}
+.card__btn {
+    display: block;
+    margin: var(--space-sm) auto;
+}
+                     /*this code is for testimonial sectin*/
+.testimonial-section h2 {
+text-align: center;
+font-size: var(--text-lg);
+margin-bottom: var(--space-sm);
+}
+.testimonial-section-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+@media screen and (min-width:1200px) {
+    .testimonial-card {
+        max-width: 550px;
+        width: auto;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .testimonial-card {
+        max-width: 550px;
+        width: auto;
+        margin-inline: auto;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+.testimonial-card {
+    display: flex;
+    border: 1px solid var(--border-base);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm);
+    justify-content: space-between;
+    gap: var(--space-md);
+    align-items: center;
+}
+.card-content {
+    justify-content: center;
+    line-height: 1.5;
+    align-items: center;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+}
+.card-content img {
+    display: block;
+    width: 150px;
+    cursor: pointer;
+    height: auto;
+    border-radius: var(--radius-max);
+    object-fit: cover;
+    transition: all ease 300ms;
+}
+.card-content img:hover {
+    transform: scale(1.05);
+}
+.client-occupation {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+.testimonial-card .client-name {
+    font-size: var(--text-md);
+    line-height: 1.2;
+    color: var(--text-main);
+}
+.paragraph {
+    line-height: 1.6;
+    font-size: var(--text-md);
+}

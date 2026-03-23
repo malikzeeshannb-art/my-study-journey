@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding Responcive Video</title>
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                  'Helvetica Neue', sans-serif;
+                  background-color: white;
+            }
+            .main-section {
+                padding: 1rem 2rem;
+            }
+            @media screen and (max-width:600px) {
+                .main-section {
+                    padding: 0;
+                }
+            }
+            .video-container {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .section-title {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .local-video {
+                position: relative;
+                aspect-ratio: 16/9;      
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 1rem;
+            }
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+                background: rgba(0,0,0,0.6);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+            video {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+                transition:transform ease 0.3s;
+            }
+            video:hover {
+                transform: scale(1.05);
+            }
+
+            .embedded-video {
+                width: 100%;
+                aspect-ratio: 16/9;
+            }
+            .embedded-video iframe {
+                height: 100%;
+                width: 100%;
+                border: none;
+                display: block;
+                transition: all ease 0.3s;
+            }
+            .embedded-video iframe:hover {
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <header class="page-header">
+
+        </header>
+        <main class="main-section">
+            <h1 class="section-title">Embedded Video VS Local Video Demo.</h1>
+        <section class="video-container">
+            <div class="local-video">
+                <button class="play-btn">▶</button>
+                <video src="assets/videos/local-video.mp4" muted controls poster="assets/images/thumbnail.png">
+                </video>
+            </div>
+
+            <div class="embedded-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/I0_951_MPE0?si=SCLla2cdyeHIbajh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        </main>
+        <footer class="page-footer">
+
+        </footer>
+    </body>
+</html>
